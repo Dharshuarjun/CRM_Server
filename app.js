@@ -7,11 +7,9 @@ const users=require("./userSchema");
 const cors=require("cors");
 const router=require("./router")
 
-const port=process.env.PORT ||8000;
+const port=process.env.PORT ||8800;
 
-app.use(cors({
-    origin:"*"
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use(router);
